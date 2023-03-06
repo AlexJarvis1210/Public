@@ -1,1 +1,31 @@
+#Weekly coding challenge! Write a fuction that checks if an integer is palindrome!
 
+def main():
+
+    #infinte loop requesting an integer from a user, breaks when an integer is entered
+    while True:
+        try:
+            number = int(input("Please enter any integer: "))
+        except ValueError:
+            print("You did not enter an integer, please try again!")
+        else:
+            break
+
+
+    #Reverses the users input and convert to a string
+    number = str(number)
+    backwards = number[::-1]
+
+
+    def palindromeCheck(a,b):
+        """Function to check if 2 integers are identical or not"""
+        if a == b:
+            print(number, "is a pailndrome")
+        else:
+            print(number, "is not a palindrome")
+
+
+    #Main function
+    palindromeCheck(number, backwards)
+
+main()
